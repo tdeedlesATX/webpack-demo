@@ -24,7 +24,7 @@ const commonConfig = merge([
       }),
     ],
   },
-  parts.loadCSS()
+  parts.loadStyles()
 ]);
 
 const productionConfig = merge([]);

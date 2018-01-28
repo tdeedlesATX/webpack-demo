@@ -1,5 +1,5 @@
-import component from './component';
+import createDivElement from './createDivElement';
 
-import './main.css';
+import './main.less';
 
-document.body.appendChild(component('Hola, Mundo!'));
+document.body.appendChild(createDivElement('Hola, Mundo!'));

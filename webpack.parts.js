@@ -10,15 +10,21 @@ exports.devServer = ({ host, port } = {}) => ({
   },
 });
 
-exports.loadCSS = ({ include, exclude } = {}) => ({
+exports.loadStyles = ({ include, exclude } = {}) => ({
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.less$/,
         include,
         exclude,
-
-        use: ["style-loader", "css-loader"],
+        use: [
+          // creates style nodes from JS strings
+          "style-loader",
+          // translates CSS into CommonJS 
+          "css-loader", 
+          // compiles Less to CSS 
+          "less-loader"
+          ],
       },
     ],
   },
